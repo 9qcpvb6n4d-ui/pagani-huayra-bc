@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pure-white: #FFFFFF;
+  --color-off-white: #F5F5F5;
+  --color-near-black: #111111;
+  --color-pagani-red: #CC0000;
+  --color-pagani-red-bright: #FF1A1A;
+  --color-mid-gray: #666666;
+  --color-light-gray: #AAAAAA;
+  --color-border-gray: #E0E0E0;
+  --font-orbitron: var(--font-orbitron, 'Orbitron', monospace);
+  --font-rajdhani: var(--font-rajdhani, 'Rajdhani', sans-serif);
+}
+
+:root {
+  --pure-white: #FFFFFF;
+  --off-white: #F5F5F5;
+  --near-black: #111111;
+  --pagani-red: #CC0000;
+  --pagani-red-bright: #FF1A1A;
+  --mid-gray: #666666;
+  --light-gray: #AAAAAA;
+  --border-gray: #E0E0E0;
+}
+
+html {
+  scroll-behavior: auto;
+  background-color: #FFFFFF;
+  color: #111111;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #111111;
+  font-family: var(--font-rajdhani, 'Rajdhani', sans-serif);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CC0000;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF1A1A;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #CC0000;
+  color: #FFFFFF;
+}
+
+::-moz-selection {
+  background-color: #CC0000;
+  color: #FFFFFF;
+}
+
+/* HUD & Scrollytelling Custom Utilities */
+.hud-glow {
+  text-shadow: 0 0 12px rgba(204, 0, 0, 0.45);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(204, 0, 0, 0.25);
+}
+
+.glow-red-lg {
+  box-shadow: 0 0 35px rgba(204, 0, 0, 0.4);
+}
+
+/* Precise corner brackets for HUD elements */
+.corner-brackets {
+  position: relative;
+}
+
+.corner-brackets::before,
+.corner-brackets::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: #CC0000;
+  pointer-events: none;
+}
+
+.corner-brackets::before {
+  top: -2px;
+  left: -2px;
+  border-top: 1.5px solid #CC0000;
+  border-left: 1.5px solid #CC0000;
+}
+
+.corner-brackets::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 1.5px solid #CC0000;
+  border-right: 1.5px solid #CC0000;
+}
+
+/* Subtle HUD scanlines */
+.scanlines {
+  background: linear-gradient(
+    rgba(17, 17, 17, 0) 50%,
+    rgba(17, 17, 17, 0.02) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Technical grid background */
+.tech-grid {
+  background-image: 
+    linear-gradient(to right, rgba(204, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(204, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
